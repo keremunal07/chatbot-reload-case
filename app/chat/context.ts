@@ -14,9 +14,15 @@ export interface ChatMessage {
   message: string;
 }
 
+const API_KEY = process.env.NEXT_PUBLIC_OPEN_AI_API_KEY || '';
+
 const openAI = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPEN_AI_API_KEY || '',
+  apiKey: API_KEY,
   dangerouslyAllowBrowser: true,
+  defaultHeaders: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${API_KEY}`,
+  },
 });
 
 export const useChatContext = () => {
