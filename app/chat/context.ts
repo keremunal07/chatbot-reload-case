@@ -30,6 +30,7 @@ export const useChatContext = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   const sendMessage = async (message: string): Promise<OpenAI.Chat.ChatCompletion> => {
+    console.log('sended !');
     setIsLoading(true);
     setMessages((prevMessages) => [...prevMessages, { isSender: true, message }]);
 
