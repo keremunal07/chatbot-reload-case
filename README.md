@@ -1,7 +1,7 @@
 # AI Chatbot - Reload Case
 
 Hi! I'm just a test case.
-Test URL: .vercel.app
+Test URL: https://chatbot-reload-case.vercel.app/
 
 ### Installation
 
